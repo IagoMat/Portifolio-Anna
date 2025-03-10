@@ -1,0 +1,109 @@
+/* Código do books.css */
+body {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--Background) !important;
+    overflow-x: hidden;
+}
+
+/* Estilos para o container que engloba a navbar e o conteúdo principal */
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Estilos para o conteúdo principal */
+.arts {
+    display: flex;
+    flex-direction: column;
+    width: 100%; 
+    padding: 20px;
+    margin-left: 340px; 
+}
+
+h1.title {
+    font-family: var(--Poppins);
+    font-size: 42px;
+    font-weight: 600;
+    margin-top: 25px;
+    text-align: left;
+    margin-left: 46px;
+    color: var(--Brown);
+}
+
+.grid-container {
+    width: 1151px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    margin-left: 46px;
+    margin-right: 46px;
+    gap: 34px;
+    margin-top: 42px;
+}
+
+.grid-container img {
+    width: 100%;
+    height: 100%;
+    border: rgba(0,0,0,7);
+    object-fit: cover; /* Garante que a imagem preencha o container sem distorcer */
+}
+
+/* Media Queries para Responsividade */
+
+/* Para telas menores que 1200px (tablets e laptops menores) */
+@media (max-width: 1583px) {
+    .arts {
+        padding: 10px; /* Reduz o preenchimento */
+    }
+
+    .grid-container {
+        width: auto; /* Permite que o grid se ajuste ao tamanho da tela */
+        grid-template-columns: repeat(2, 1fr); /* Muda para duas colunas */
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+/* Para telas menores que 768px (smartphones) */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column; /* Empilha os elementos verticalmente */
+    }
+
+    .container {
+        flex-direction: column; /* Empilha a navbar e o conteúdo */
+    }
+
+    .arts {
+        margin-left: 0; /* Remove a margem lateral */
+        align-items: center; /* Centraliza o conteúdo horizontalmente */
+        padding: 10px; /* Reduz o preenchimento */
+    }
+
+    h1.title {
+        font-size: 32px; /* Reduz o tamanho da fonte do título */
+        text-align: center; /* Centraliza o título */
+        margin-left: 0;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr; /* Muda para uma coluna */
+        margin-left: 10px;
+        margin-right: 10px;
+        gap: 20px;
+    }
+}
+
+/* Para telas ainda menores (smartphones menores) */
+@media (max-width: 480px) {
+    h1.title {
+        font-size: 24px; /* Reduz ainda mais o tamanho da fonte */
+    }
+
+    .grid-container {
+        margin-left: 5px;
+        margin-right: 5px;
+        gap: 10px;
+    }
+}

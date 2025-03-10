@@ -1,0 +1,153 @@
+body {
+    background-color: var(--Background) !important;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 1260px;
+    width: 100%;
+    margin-left: 340px;
+    padding: 20px;
+}
+
+.about-me{
+    display: flex;
+    gap: 40px;
+}
+
+.about-me-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-me-image img { /* Target the img tag directly for styling */
+    max-width: 395px;  /* Set a maximum width for the image */
+    height: auto;
+}
+
+
+.about-me-text {
+    font-family: var(--Poppins);
+    color: var(--Brown);
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.competencies {
+    display: flex;
+    gap: 200px;
+    margin-top: 20px;
+}
+
+.exhibitions {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.exhibitions h1 {
+    font-family: var(--Poppins);
+    color: var(--Cian);
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.exhibitions ul li {
+    font-family: var(--Poppins);
+    font-size: 16px;
+    line-height: 1.1;
+    margin-top: 13px;
+}
+
+.awards {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.awards h1 {
+    font-family: var(--Poppins);
+    color: var(--Cian);
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.awards ul li {
+    font-family: var(--Poppins);
+    font-size: 16px;
+    line-height: 1.1;
+    margin-top: 13px;
+}
+
+@media (max-width: 767px) {
+    .main-content {
+        margin-left: 0; /* Remove the left margin for smaller screens */
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .about-me {
+        flex-direction: column; /* Stack image and text vertically */
+        align-items: center; /* Center items horizontally */
+        gap: 20px; /* Reduce gap for smaller screens */
+    }
+
+    .about-me-image img {
+        max-width: 80%; /* Allow the image to take up more width */
+    }
+
+    .competencies {
+        flex-direction: column; /* Stack exhibitions and awards vertically */
+        gap: 50px; /* Adjust gap */
+    }
+
+    .exhibitions,
+    .awards {
+        width: 100%; /* Ensure full width */
+    }
+
+    .about-me-text {
+        font-size: 16px; /* Reduce font size */
+    }
+
+    .exhibitions h1,
+    .awards h1 {
+        font-size: 22px; /* Reduce header size */
+    }
+
+    .exhibitions ul li,
+    .awards ul li {
+        font-size: 14px; /* Reduce list item size */
+    }
+}
+
+@media (min-width: 768px) {
+    .about-me {
+        flex-direction: row;
+    }
+
+    .competencies {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .exhibitions,
+    .awards {
+        width: 48%;
+    }
+    .about-me-text {
+        font-size: 17px;
+        line-height: 1.6;
+    }
+}
+
+@media (max-width: 1051px) {
+    .about-me{
+        display: flex;
+        flex-direction: column;
+    }
+}

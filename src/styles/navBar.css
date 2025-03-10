@@ -1,0 +1,200 @@
+/* navBar.css */
+
+body{
+    background-color: var(--White);
+}
+
+/* Estilos para a navbar (barra lateral) em telas maiores */
+.tudo {
+    position: fixed; /* This makes the navbar fixed */
+    top: 0;          /* Sticks it to the top of the screen */
+    left: 0;         /* Sticks it to the left of the screen */
+    overflow-y: auto;  /* Optional:  Adds scrolling if content overflows */
+    width: 340px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--Light-Yellow);
+    box-shadow: 2px 0px 4px rgba(220, 220, 220, 100);
+    z-index: 10; /* Garante que a navbar esteja sempre na frente */
+}
+
+.logo img {
+    width: 250px;
+    height: 218px;
+    margin-top: 16px;
+}
+
+.text p {
+    width: 250px;
+    height: 75px;
+    font-family: var(--Poppins);
+    font-size: 13px;
+    margin-top: 33px;
+    margin-left: 46px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    margin-top: 30px;
+    gap: 12px;
+}
+
+nav ul li a {
+    font-family: var(--Patrick-hand);
+    font-size: 22px;
+    text-decoration: none;
+    color: var(--Brown);
+    font-weight: 500;
+}
+
+.language-switcher {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.language-switcher img {
+    width: 50px;
+    height: 32px;
+    cursor: pointer;
+}
+
+.eua {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.eua p {
+    font-family: var(--Patrick-hand);
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.brazil {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.brazil img {
+    margin-left: 16px;
+}
+
+.brazil p {
+    font-family: var(--Patrick-hand);
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.contacts .icons {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-right: 42px;
+}
+
+.contacts .icons a img {
+    margin-top: 40px;
+    height: 15px;
+}
+
+.copyright {
+    font-family: var(--Patrick-hand);
+    font-size: 13px;
+    margin-top: 30px;
+    margin-left: 0px;
+    margin-right: 42px;
+}
+
+/* Estilos para o menu hambúrguer */
+.hamburger-menu {
+    display: none; /* Escondido por padrão */
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+    z-index: 1000; /* Garante que o menu esteja sempre na frente */
+}
+
+.hamburger-menu img {
+    width: 30px;
+    height: 30px;
+}
+
+
+/* Estilos para o botão de fechar */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: var(--Brown);
+    display: none; /* Escondido por padrão */
+}
+
+/* Media query para telas menores que 768px (smartphones) */
+@media (max-width: 1051px) {
+    /* Esconde a navbar por padrão */
+    .tudo {
+        position: fixed;
+        top: 0;
+        left: -340px; /* Esconde a navbar fora da tela */
+        height: 100vh;
+        transition: left 0.3s ease; /* Adiciona uma transição suave */
+        overflow-y: auto; /* Adiciona barra de rolagem se o conteúdo for muito grande */
+    }
+
+    /* Mostra o menu hambúrguer */
+    .hamburger-menu {
+        display: block;
+        position: fixed;
+        z-index: 20;
+    }
+
+    /* Mostra o botão de fechar quando a navbar está visível */
+    .close-button {
+        display: block;
+    }
+
+    /* Estilo para mostrar a navbar quando a classe 'active' é adicionada */
+    .tudo.active {
+        left: 0; /* Move a navbar para dentro da tela */
+    }
+}
+
+/*----------Responsividade----------*/
+/* @media (max-width: 1366px) {
+
+    .tudo{
+        width: 320px;
+    }
+
+    .logo img{
+        width: 250px;
+        height: 218px;
+        margin-top: 16px;
+    }
+
+    .text p{
+        display: none;
+    }
+
+    nav ul{
+        margin-top: 20px;
+    }
+
+    .language-switcher{
+        margin-top: 30px;
+    }
+
+    .contacts .icons a img{
+        margin-top: 30px;
+    }
+} */

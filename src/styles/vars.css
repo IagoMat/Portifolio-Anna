@@ -1,0 +1,16 @@
+:root
+{
+    /* Fonts */
+    --Poppins: "Poppins", sans-serif;
+    --Patrick-hand: "Patrick Hand", sans-serif;
+
+    /* Color */
+    --Yellow: #EFF1C0;
+    --Light-Yellow: #f7f8df;
+    --Brown: #452112;
+    --Grey: #333;
+    --Black: #fff;
+    --White: #fff;
+    --Background: #f9f9e6;
+    --Cian: #65DDE6;
+}
